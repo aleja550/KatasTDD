@@ -23,7 +23,10 @@ public class FizzBuzzTest
 
     private void ImprimirNumeros()
     {
-        throw new NotImplementedException();
+        for (var i = 1; i <= 100; i++)
+        {
+            Console.WriteLine(i);
+        }
     }
 
     // [Theory]
