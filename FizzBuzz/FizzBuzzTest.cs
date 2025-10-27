@@ -26,6 +26,20 @@ public class FizzBuzzTest(ITestOutputHelper output)
         lineas.Length.Should().Be(100);
         lineas.Should().BeEquivalentTo(numerosEsperados, options => options.WithStrictOrdering());
     }
+
+    [Theory]
+    // [InlineData(1)]
+    [InlineData(3)]
+    // [InlineData(6)]
+    // [InlineData(10)]
+    public void Validar_Numero_Multiplo_De_Tres(int numero)
+    {
+        //Act
+        var resultado = EsMultiploDeTres(numero);
+    
+        //Assert
+        resultado.Should().BeTrue();
+    }
     
     private void ImprimirNumeros()
     {
@@ -34,14 +48,9 @@ public class FizzBuzzTest(ITestOutputHelper output)
             Console.WriteLine(i);
         }
     }
-
-    // [Theory]
-    // [InlineData(1)]
-    // [InlineData(3)]
-    // [InlineData(6)]
-    // [InlineData(10)]
-    // public void Validar_Numero_Multiplo_De_Tres(int numero)
-    // {
-    //     
-    // }
+    
+    private bool EsMultiploDeTres(int numero)
+    {
+        throw new NotImplementedException();
+    }
 }
