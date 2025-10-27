@@ -3,7 +3,7 @@ using Xunit.Abstractions;
 
 namespace FizzBuzz;
 
-public class FizzBuzzTest
+public class FizzBuzzTest(ITestOutputHelper output)
 {
     [Fact]
     public void Debe_Imprimir_Numeros_DelUnoAl100()
@@ -18,9 +18,15 @@ public class FizzBuzzTest
         //Assert 
         var salida = captura.ToString();
         var lineas = salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
-        lineas.Length.Should().Be(100);
-    }
+        
+        output.WriteLine(salida);
+        
+        var numerosEsperados = Enumerable.Range(1, 100).Select(n => n.ToString()).ToArray();
 
+        lineas.Length.Should().Be(100);
+        lineas.Should().BeEquivalentTo(numerosEsperados, options => options.WithStrictOrdering());
+    }
+    
     private void ImprimirNumeros()
     {
         for (var i = 1; i <= 100; i++)
