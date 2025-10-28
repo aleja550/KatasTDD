@@ -111,11 +111,7 @@ public class FizzBuzzTest(ITestOutputHelper output)
         resultado.Should().BeTrue();
     }
 
-    private static bool EsMultiploDeAmbos(int numero)
-    {
-        return EsMultiploDeTres(numero) && EsMultiploDeCinco(numero);
-    }
-
+    private static bool EsMultiploDeAmbos(int numero) =>EsMultiploDeTres(numero) && EsMultiploDeCinco(numero);
     
     private static void ImprimirNumeros()
     {
