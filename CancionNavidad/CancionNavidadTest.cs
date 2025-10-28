@@ -98,7 +98,7 @@ public class CancionNavidadTest
         var cancion = new Cancion();
     
         //Act
-        var cantidadLineas = cancion.Estrofas[1].Lineas.Count;
+        var cantidadLineas = cancion.Estrofas[2].Lineas.Count;
     
         //Assert
         cantidadLineas.Should().Be(4);
@@ -173,7 +173,7 @@ public class CancionNavidadTest
     
         //Act
         var estrofa = cancion.Estrofas[indiceEstrofa];
-        var ultimaLinea = estrofa.Lineas[estrofa.Lineas.Count - 1];
+        var ultimaLinea = estrofa.Lineas[^1];
     
         //Assert
         ultimaLinea.Should().Be(ultimaLineaEsperada);
