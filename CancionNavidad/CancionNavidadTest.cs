@@ -71,4 +71,23 @@ public class CancionNavidadTest
         //Assert
         terceraLinea.Should().Be(textoEsperado);
     }
+    
+    [Fact]
+    public void PrimeraEstrofa_Debe_Tener_Contenido_Completo()
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var contenidoEsperado = new List<string>
+        {
+            "On the first day of Christmas",
+            "My true love sent to me:",
+            "A partridge in a pear tree."
+        };
+    
+        //Act
+        var contenidoEstrofa = cancion.Estrofas[0].Lineas;
+    
+        //Assert
+        contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
+    }
 }
