@@ -39,16 +39,6 @@ public class FizzBuzzTest(ITestOutputHelper output)
         resultado.Should().BeTrue();
     }
     
-    private static void ImprimirNumeros()
-    {
-        for (var i = 1; i <= 100; i++)
-        {
-            Console.WriteLine(EsMultiploDeTres(i) ? "Fizz" : i.ToString());
-        }
-    }
-    
-    private static bool EsMultiploDeTres(int numero) => numero % 3 == 0;
-    
     [Fact]
     public void Debe_Imprimir_Fizz_CuandoSea_MultiploDeTres()
     {
@@ -84,7 +74,38 @@ public class FizzBuzzTest(ITestOutputHelper output)
         //Assert
         resultado.Should().BeTrue();
     }
+    
+    [Fact]
+    public void Debe_Imprimir_Buzz_CuandoSea_MultiploDeCinco()
+    {
+        //Arrange
+        var captura = new StringWriter();
+        Console.SetOut(captura);
+ 
+        //Act
+        ImprimirNumeros();
+        
+        //Assert 
+        var salida = captura.ToString();
+        var lineas = salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
+        
+        output.WriteLine(salida);
+        
+        lineas[4].Should().Be("Buzz");
+        lineas[9].Should().Be("Buzz");
+        lineas[14].Should().Be("Buzz");
+        lineas[19].Should().Be("Buzz");
+    }
+    
+    private static void ImprimirNumeros()
+    {
+        for (var i = 1; i <= 100; i++)
+        {
+            Console.WriteLine(EsMultiploDeTres(i) ? "Fizz" : i.ToString());
+        }
+    }
+    
+    private static bool EsMultiploDeTres(int numero) => numero % 3 == 0;
 
     private static bool EsMultiploDeCinco(int numero) => numero % 5 == 0;
-    
 }
