@@ -10,7 +10,7 @@ public class Estrofa
         [
             "On the first day of Christmas",
             "My true love sent to me:",
-            ""
+            "A partridge in a pear tree."
         ];
     }
 }
