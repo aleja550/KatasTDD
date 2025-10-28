@@ -15,6 +15,7 @@ public class Cancion
 
     public string ObtenerCancionCompleta()
     {
-        throw new NotImplementedException();
+        var estrofasTexto = Estrofas.Select(e => e.ObtenerTextoCompleto());
+        return string.Join("\n\n", estrofasTexto);
     }
 }
