@@ -3,5 +3,5 @@
 - [x] Imprimir Fizz cuando sea multiplo de 3 en lugar del numero
 - [x] Validar números multiplos de 5
 - [x] Imprimir Buzz cuando sea multiplo de 5 en lugar del numero
-- [ ] Validar números multiplos de 5 y 3
+- [x] Validar números multiplos de 5 y 3
 - [ ] Imprimir FizzBuzz cuando sea multiplo de 3 y 5

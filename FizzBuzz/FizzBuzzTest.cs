@@ -111,6 +111,28 @@ public class FizzBuzzTest(ITestOutputHelper output)
         resultado.Should().BeTrue();
     }
 
+    [Fact]
+    public void Debe_Imprimir_FizzBuzz_CuandoSea_MultiploDeTres_Y_Cinco()
+    {
+        //Arrange
+        var captura = new StringWriter();
+        Console.SetOut(captura);
+ 
+        //Act
+        ImprimirNumeros();
+    
+        //Assert 
+        var salida = captura.ToString();
+        var lineas = salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
+    
+        output.WriteLine(salida);
+    
+        lineas[14].Should().Be("FizzBuzz");  
+        lineas[29].Should().Be("FizzBuzz"); 
+        lineas[44].Should().Be("FizzBuzz");  
+        lineas[59].Should().Be("FizzBuzz");
+    }
+    
     private static bool EsMultiploDeAmbos(int numero) =>EsMultiploDeTres(numero) && EsMultiploDeCinco(numero);
     
     private static void ImprimirNumeros()
