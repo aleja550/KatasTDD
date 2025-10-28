@@ -57,4 +57,18 @@ public class CancionNavidadTest
         //Assert
         segundaLinea.Should().Be(textoEsperado);
     }
+    
+    [Fact]
+    public void TerceraLinea_DeEstrofa1_Debe_Ser_APartridgeInAPearTree()
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var textoEsperado = "A partridge in a pear tree.";
+    
+        //Act
+        var terceraLinea = cancion.Estrofas[0].Lineas[2];
+    
+        //Assert
+        terceraLinea.Should().Be(textoEsperado);
+    }
 }
