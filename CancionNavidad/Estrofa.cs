@@ -9,7 +9,7 @@ public class Estrofa
         Lineas =
         [
             "On the first day of Christmas",
-            "",
+            "My true love sent to me:",
             ""
         ];
     }
