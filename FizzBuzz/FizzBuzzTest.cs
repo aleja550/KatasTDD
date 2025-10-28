@@ -93,15 +93,18 @@ public class FizzBuzzTest(ITestOutputHelper output)
         
         lineas[4].Should().Be("Buzz");
         lineas[9].Should().Be("Buzz");
-        lineas[14].Should().Be("Buzz");
         lineas[19].Should().Be("Buzz");
+        lineas[24].Should().Be("Buzz");
     }
     
     private static void ImprimirNumeros()
     {
         for (var i = 1; i <= 100; i++)
         {
-            Console.WriteLine(EsMultiploDeTres(i) ? "Fizz" : i.ToString());
+            Console.WriteLine(EsMultiploDeTres(i) 
+                ? "Fizz" 
+                : EsMultiploDeCinco(i)
+                ? "Buzz" : i.ToString());
         }
     }
     
