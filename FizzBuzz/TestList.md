@@ -1,5 +1,5 @@
 - [x] Imprimir los números del 1 al 100
-- [ ] Validar números multiplos de 3
+- [x] Validar números multiplos de 3
 - [ ] Imprimir Fizz cuando sea multiplo de 3 en lugar del numero
 - [ ] Validar números multiplos de 5
 - [ ] Imprimir Buzz cuando sea multiplo de 5 en lugar del numero
