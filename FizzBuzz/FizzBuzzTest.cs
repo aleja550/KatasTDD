@@ -97,6 +97,26 @@ public class FizzBuzzTest(ITestOutputHelper output)
         lineas[24].Should().Be("Buzz");
     }
     
+    [Theory]
+    [InlineData(15)]
+    // [InlineData(30)]
+    // [InlineData(45)]
+    // [InlineData(60)]
+    public void Validar_Numero_Multiplo_De_Tres_Y_Cinco(int numero)
+    {
+        //Act
+        var resultado = EsMultiploDeAmbos(numero);
+    
+        //Assert
+        resultado.Should().BeTrue();
+    }
+
+    private static bool EsMultiploDeAmbos(int numero)
+    {
+        throw new NotImplementedException();
+    }
+
+    
     private static void ImprimirNumeros()
     {
         for (var i = 1; i <= 100; i++)
