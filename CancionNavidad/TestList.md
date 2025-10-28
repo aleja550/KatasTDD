@@ -5,6 +5,12 @@
 - [x] Tercera línea de estrofa 1: "A partridge in a pear tree."
 - [x] Validar contenido completo de estrofa 1
 - [x] La segunda estrofa debe tener 4 líneas
-- [ ] Validar contenido completo de estrofa 2
-- [ ] Cada estrofa N debe tener N+2 líneas
-- [ ] Imprimir canción completa
+- [x] Validar contenido completo de estrofa 2
+- [ ] Validar que todas las estrofas empiezan con "On the {x} day of Christmas"
+- [ ] Validar que todas las estrofas tienen "My true love sent to me:" como segunda línea
+- [ ] Validar que la última línea de todas las estrofas es "A partridge in a pear tree."
+- [ ] Los regalos deben aparecer del más reciente al más antiguo
+- [ ] El penúltimo regalo (desde estrofa 2) debe tener "and" al final
+- [ ] Validar estrofa 12 completa
+- [ ] Imprimir una estrofa completa
+- [ ] Imprimir la canción completa con separación entre estrofas

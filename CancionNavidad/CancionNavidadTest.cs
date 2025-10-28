@@ -123,4 +123,23 @@ public class CancionNavidadTest
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
     }
+    
+    [Theory]
+    [InlineData(0, "first")]
+    [InlineData(1, "second")]
+    [InlineData(2, "third")]
+    [InlineData(5, "sixth")]
+    [InlineData(11, "twelfth")]
+    public void TodasLasEstrofas_Deben_Empezar_Con_OnTheDayOfChristmas(int indiceEstrofa, string valor)
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var primeraLineaEsperada = $"On the {valor} day of Christmas";
+    
+        //Act
+        var primeraLinea = cancion.Estrofas[indiceEstrofa].Lineas[0];
+    
+        //Assert
+        primeraLinea.Should().Be(primeraLineaEsperada);
+    }
 }
