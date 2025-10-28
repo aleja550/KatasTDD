@@ -1,4 +1,4 @@
-- [ ] La canción debe tener 12 estrofas
+- [x] La canción debe tener 12 estrofas
 - [ ] La primera estrofa debe tener 3 líneas
 - [ ] Primera línea de estrofa 1: "On the first day of Christmas"
 - [ ] Segunda línea de estrofa 1: "My true love sent to me:"
