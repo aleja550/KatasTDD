@@ -103,4 +103,24 @@ public class CancionNavidadTest
         //Assert
         cantidadLineas.Should().Be(4);
     }
+    
+    [Fact]
+    public void SegundaEstrofa_Debe_Tener_Contenido_Completo()
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var contenidoEsperado = new List<string>
+        {
+            "On the second day of Christmas",
+            "My true love sent to me:",
+            "Two turtle doves and",
+            "A partridge in a pear tree."
+        };
+    
+        //Act
+        var contenidoEstrofa = cancion.Estrofas[1].Lineas;
+    
+        //Assert
+        contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
+    }
 }

@@ -5,8 +5,6 @@
 - [x] Tercera línea de estrofa 1: "A partridge in a pear tree."
 - [x] Validar contenido completo de estrofa 1
 - [x] La segunda estrofa debe tener 4 líneas
-- [x] Validar contenido completo de estrofa 2
-- [ ] La tercera estrofa debe tener 5 líneas
-- [ ] Validar contenido completo de estrofa 3
+- [ ] Validar contenido completo de estrofa 2
 - [ ] Cada estrofa N debe tener N+2 líneas
 - [ ] Imprimir canción completa
