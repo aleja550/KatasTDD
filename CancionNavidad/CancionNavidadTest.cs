@@ -229,6 +229,7 @@ public class CancionNavidadTest
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
     }
+    
     [Fact]
     public void Estrofa_Debe_Poder_Imprimirse_Con_Saltos_De_Linea()
     {

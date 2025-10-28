@@ -50,6 +50,6 @@ public class Estrofa
 
     public string ObtenerTextoCompleto()
     {
-        throw new NotImplementedException();
+        return string.Join("\n", Lineas);
     }
 }
