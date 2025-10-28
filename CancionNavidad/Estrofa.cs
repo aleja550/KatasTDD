@@ -8,7 +8,7 @@ public class Estrofa
     {
         Lineas =
         [
-            "",
+            "On the first day of Christmas",
             "",
             ""
         ];
