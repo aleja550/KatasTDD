@@ -1,0 +1,12 @@
+- [ ] La canción debe tener 12 estrofas
+- [ ] La primera estrofa debe tener 3 líneas
+- [ ] Primera línea de estrofa 1: "On the first day of Christmas"
+- [ ] Segunda línea de estrofa 1: "My true love sent to me:"
+- [ ] Tercera línea de estrofa 1: "A partridge in a pear tree."
+- [ ] Validar contenido completo de estrofa 1
+- [ ] La segunda estrofa debe tener 4 líneas
+- [ ] Validar contenido completo de estrofa 2
+- [ ] La tercera estrofa debe tener 5 líneas
+- [ ] Validar contenido completo de estrofa 3
+- [ ] Cada estrofa N debe tener N+2 líneas
+- [ ] Imprimir canción completa
