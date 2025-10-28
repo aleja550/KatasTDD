@@ -49,7 +49,7 @@ public class CancionNavidadTest
     {
         //Arrange
         var cancion = new Cancion();
-        var textoEsperado = "My true love sent to me:";
+        const string textoEsperado = "My true love sent to me:";
     
         //Act
         var segundaLinea = cancion.Estrofas[0].Lineas[1];
