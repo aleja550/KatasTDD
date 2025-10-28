@@ -13,7 +13,7 @@ public class Estrofa
     private static readonly string[] Regalos =
     [
         "A partridge in a pear tree.",
-        "Two turtle doves and",
+        "Two turtle doves",
         "Three french hens",
         "Four calling birds",
         "Five golden rings",
@@ -37,7 +37,14 @@ public class Estrofa
 
         for (var i = numeroEstrofa - 1; i >= 0; i--)
         {
-            Lineas.Add(Regalos[i]);
+            if (i == 1 && numeroEstrofa > 1)
+            {
+                Lineas.Add(Regalos[i] + " and");
+            }
+            else
+            {
+                Lineas.Add(Regalos[i]);
+            }
         }
     }
 }

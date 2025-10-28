@@ -9,7 +9,7 @@
 - [x] Validar que todas las estrofas empiezan con "On the {x} day of Christmas"
 - [x] Validar que todas las estrofas tienen "My true love sent to me:" como segunda línea
 - [x] Validar que la última línea de todas las estrofas es "A partridge in a pear tree."
-- [ ] Los regalos deben aparecer del más reciente al más antiguo
+- [x] Los regalos deben aparecer del más reciente al más antiguo
 - [ ] El penúltimo regalo (desde estrofa 2) debe tener "and" al final
 - [ ] Validar estrofa 12 completa
 - [ ] Imprimir una estrofa completa
