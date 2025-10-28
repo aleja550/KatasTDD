@@ -6,7 +6,8 @@ namespace FizzBuzz;
 public class FizzBuzzTest(ITestOutputHelper output)
 {
     [Fact]
-    public void Debe_Imprimir_Numeros_DelUnoAl100()
+    
+    public void Debe_Imprimir_CienNumeros()
     {
         //Arrange
         var captura = new StringWriter();
@@ -21,10 +22,7 @@ public class FizzBuzzTest(ITestOutputHelper output)
         
         output.WriteLine(salida);
         
-        var numerosEsperados = Enumerable.Range(1, 100).Select(n => n.ToString()).ToArray();
-
         lineas.Length.Should().Be(100);
-        lineas.Should().BeEquivalentTo(numerosEsperados, options => options.WithStrictOrdering());
     }
 
     [Theory]
@@ -45,7 +43,14 @@ public class FizzBuzzTest(ITestOutputHelper output)
     {
         for (var i = 1; i <= 100; i++)
         {
-            Console.WriteLine(i);
+            if (EsMultiploDeTres(i))
+            {
+                Console.WriteLine("Fizz");
+            }
+            else
+            {
+                Console.WriteLine(i);
+            }
         }
     }
     
@@ -72,5 +77,4 @@ public class FizzBuzzTest(ITestOutputHelper output)
         lineas[8].Should().Be("Fizz");
         lineas[11].Should().Be("Fizz");
     }
-
 }
