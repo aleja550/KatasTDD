@@ -145,9 +145,13 @@ public class FizzBuzzTest(ITestOutputHelper output)
     
     private static string ObtenerValor(int numero)
     {
+        if (EsMultiploDeAmbos(numero)) return "FizzBuzz";
+    
         if (EsMultiploDeTres(numero)) return "Fizz";
     
-        return EsMultiploDeCinco(numero) ? "Buzz" : numero.ToString();
+        if (EsMultiploDeCinco(numero)) return "Buzz";
+    
+        return numero.ToString();
     }
     
     private static bool EsMultiploDeTres(int numero) => numero % 3 == 0;
