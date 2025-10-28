@@ -21,5 +21,11 @@ public class Estrofa
             Lineas.Add("Two turtle doves and");
             Lineas.Add("A partridge in a pear tree.");
         }
+        else
+        {
+            Lineas.Add("");
+            Lineas.Add("");
+            Lineas.Add(""); 
+        }
     }
 }
