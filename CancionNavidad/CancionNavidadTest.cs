@@ -178,4 +178,25 @@ public class CancionNavidadTest
         //Assert
         ultimaLinea.Should().Be(ultimaLineaEsperada);
     }
+    
+    [Fact]
+    public void TerceraEstrofa_Debe_Tener_Regalos_En_Orden_Inverso()
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var contenidoEsperado = new List<string>
+        {
+            "On the third day of Christmas",
+            "My true love sent to me:",
+            "Three french hens",
+            "Two turtle doves and",
+            "A partridge in a pear tree."
+        };
+    
+        //Act
+        var contenidoEstrofa = cancion.Estrofas[2].Lineas;
+    
+        //Assert
+        contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
+    }
 }
