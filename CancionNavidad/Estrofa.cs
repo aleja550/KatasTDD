@@ -47,4 +47,9 @@ public class Estrofa
             }
         }
     }
+
+    public string ObtenerTextoCompleto()
+    {
+        throw new NotImplementedException();
+    }
 }

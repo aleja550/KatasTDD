@@ -229,4 +229,17 @@ public class CancionNavidadTest
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
     }
+    [Fact]
+    public void Estrofa_Debe_Poder_Imprimirse_Con_Saltos_De_Linea()
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var estrofaEsperada = "On the first day of Christmas\nMy true love sent to me:\nA partridge in a pear tree.";
+    
+        //Act
+        var estrofaImpresa = cancion.Estrofas[0].ObtenerTextoCompleto();
+    
+        //Assert
+        estrofaImpresa.Should().Be(estrofaEsperada);
+    }
 }
