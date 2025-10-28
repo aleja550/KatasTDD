@@ -159,4 +159,23 @@ public class CancionNavidadTest
         //Assert
         segundaLinea.Should().Be(segundaLineaEsperada);
     }
+    
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    [InlineData(5)]
+    [InlineData(11)]
+    public void TodasLasEstrofas_Deben_Terminar_Con_APartridgeInAPearTree(int indiceEstrofa)
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var ultimaLineaEsperada = "A partridge in a pear tree.";
+    
+        //Act
+        var estrofa = cancion.Estrofas[indiceEstrofa];
+        var ultimaLinea = estrofa.Lineas[estrofa.Lineas.Count - 1];
+    
+        //Assert
+        ultimaLinea.Should().Be(ultimaLineaEsperada);
+    }
 }
