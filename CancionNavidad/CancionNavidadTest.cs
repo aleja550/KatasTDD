@@ -199,4 +199,34 @@ public class CancionNavidadTest
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
     }
+    
+    [Fact]
+    public void Estrofa12_Debe_Tener_Contenido_Completo()
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var contenidoEsperado = new List<string>
+        {
+            "On the twelfth day of Christmas",
+            "My true love sent to me:",
+            "Twelve drummers drumming",
+            "Eleven pipers piping",
+            "Ten lords a-leaping",
+            "Nine ladies dancing",
+            "Eight maids a-milking",
+            "Seven swans a-swimming",
+            "Six geese a-laying",
+            "Five golden rings",
+            "Four calling birds",
+            "Three french hens",
+            "Two turtle doves and",
+            "A partridge in a pear tree."
+        };
+    
+        //Act
+        var contenidoEstrofa = cancion.Estrofas[11].Lineas;
+    
+        //Assert
+        contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
+    }
 }
