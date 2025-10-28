@@ -87,6 +87,6 @@ public class FizzBuzzTest(ITestOutputHelper output)
 
     private static bool EsMultiploDeCinco(int numero)
     {
-        throw new NotImplementedException();
+        return numero % 5 == 0;
     }
 }
