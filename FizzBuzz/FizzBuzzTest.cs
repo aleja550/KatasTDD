@@ -28,10 +28,10 @@ public class FizzBuzzTest(ITestOutputHelper output)
     }
 
     [Theory]
-    // [InlineData(1)]
     [InlineData(3)]
-    // [InlineData(6)]
-    // [InlineData(10)]
+    [InlineData(6)]
+    [InlineData(9)]
+    [InlineData(12)]
     public void Validar_Numero_Multiplo_De_Tres(int numero)
     {
         //Act
@@ -49,8 +49,5 @@ public class FizzBuzzTest(ITestOutputHelper output)
         }
     }
     
-    private bool EsMultiploDeTres(int numero)
-    {
-        throw new NotImplementedException();
-    }
+    private bool EsMultiploDeTres(int numero) => numero % 3 == 0;
 }
