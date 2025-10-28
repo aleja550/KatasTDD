@@ -73,9 +73,9 @@ public class FizzBuzzTest(ITestOutputHelper output)
     
     [Theory]
     [InlineData(5)]
-    // [InlineData(6)]
-    // [InlineData(9)]
-    // [InlineData(12)]
+    [InlineData(15)]
+    [InlineData(25)]
+    [InlineData(35)]
     public void Validar_Numero_Multiplo_De_Cinco(int numero)
     {
         //Act
@@ -85,8 +85,6 @@ public class FizzBuzzTest(ITestOutputHelper output)
         resultado.Should().BeTrue();
     }
 
-    private static bool EsMultiploDeCinco(int numero)
-    {
-        return numero % 5 == 0;
-    }
+    private static bool EsMultiploDeCinco(int numero) => numero % 5 == 0;
+    
 }
