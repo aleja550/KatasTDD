@@ -90,4 +90,17 @@ public class CancionNavidadTest
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
     }
+    
+    [Fact]
+    public void SegundaEstrofa_Debe_Tener_4_Lineas()
+    {
+        //Arrange
+        var cancion = new Cancion();
+    
+        //Act
+        var cantidadLineas = cancion.Estrofas[1].Lineas.Count;
+    
+        //Assert
+        cantidadLineas.Should().Be(4);
+    }
 }
