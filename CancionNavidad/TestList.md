@@ -6,7 +6,7 @@
 - [x] Validar contenido completo de estrofa 1
 - [x] La segunda estrofa debe tener 4 líneas
 - [x] Validar contenido completo de estrofa 2
-- [ ] Validar que todas las estrofas empiezan con "On the {x} day of Christmas"
+- [x] Validar que todas las estrofas empiezan con "On the {x} day of Christmas"
 - [ ] Validar que todas las estrofas tienen "My true love sent to me:" como segunda línea
 - [ ] Validar que la última línea de todas las estrofas es "A partridge in a pear tree."
 - [ ] Los regalos deben aparecer del más reciente al más antiguo

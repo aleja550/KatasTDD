@@ -142,4 +142,21 @@ public class CancionNavidadTest
         //Assert
         primeraLinea.Should().Be(primeraLineaEsperada);
     }
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    [InlineData(5)]
+    [InlineData(11)]
+    public void TodasLasEstrofas_Deben_Tener_MyTrueLoveSentToMe_ComoSegundaLinea(int indiceEstrofa)
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var segundaLineaEsperada = "My true love sent to me:";
+    
+        //Act
+        var segundaLinea = cancion.Estrofas[indiceEstrofa].Lineas[1];
+    
+        //Assert
+        segundaLinea.Should().Be(segundaLineaEsperada);
+    }
 }
