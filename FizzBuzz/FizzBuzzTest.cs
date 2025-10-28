@@ -99,9 +99,9 @@ public class FizzBuzzTest(ITestOutputHelper output)
     
     [Theory]
     [InlineData(15)]
-    // [InlineData(30)]
-    // [InlineData(45)]
-    // [InlineData(60)]
+    [InlineData(30)]
+    [InlineData(45)]
+    [InlineData(60)]
     public void Validar_Numero_Multiplo_De_Tres_Y_Cinco(int numero)
     {
         //Act
@@ -113,7 +113,7 @@ public class FizzBuzzTest(ITestOutputHelper output)
 
     private static bool EsMultiploDeAmbos(int numero)
     {
-        throw new NotImplementedException();
+        return EsMultiploDeTres(numero) && EsMultiploDeCinco(numero);
     }
 
     
