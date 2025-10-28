@@ -9,6 +9,22 @@ public class Estrofa
         "first", "second", "third", "fourth", "fifth", "sixth",
         "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
     ];
+    
+    private static readonly string[] Regalos =
+    [
+        "A partridge in a pear tree.",
+        "Two turtle doves and",
+        "Three french hens",
+        "Four calling birds",
+        "Five golden rings",
+        "Six geese a-laying",
+        "Seven swans a-swimming",
+        "Eight maids a-milking",
+        "Nine ladies dancing",
+        "Ten lords a-leaping",
+        "Eleven pipers piping",
+        "Twelve drummers drumming"
+    ];
 
     
     public Estrofa(int numeroEstrofa)
@@ -16,10 +32,12 @@ public class Estrofa
         Lineas =
         [
             $"On the {Valores[numeroEstrofa - 1]} day of Christmas",
-
-            "My true love sent to me:",
-
-            "A partridge in a pear tree."
+            "My true love sent to me:"
         ];
+
+        for (var i = numeroEstrofa - 1; i >= 0; i--)
+        {
+            Lineas.Add(Regalos[i]);
+        }
     }
 }
