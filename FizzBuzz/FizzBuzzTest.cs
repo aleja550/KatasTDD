@@ -70,4 +70,23 @@ public class FizzBuzzTest(ITestOutputHelper output)
         lineas[8].Should().Be("Fizz");
         lineas[11].Should().Be("Fizz");
     }
+    
+    [Theory]
+    [InlineData(5)]
+    // [InlineData(6)]
+    // [InlineData(9)]
+    // [InlineData(12)]
+    public void Validar_Numero_Multiplo_De_Cinco(int numero)
+    {
+        //Act
+        var resultado = EsMultiploDeCinco(numero);
+    
+        //Assert
+        resultado.Should().BeTrue();
+    }
+
+    private static bool EsMultiploDeCinco(int numero)
+    {
+        throw new NotImplementedException();
+    }
 }
