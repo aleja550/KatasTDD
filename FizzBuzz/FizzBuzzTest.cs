@@ -43,14 +43,7 @@ public class FizzBuzzTest(ITestOutputHelper output)
     {
         for (var i = 1; i <= 100; i++)
         {
-            if (EsMultiploDeTres(i))
-            {
-                Console.WriteLine("Fizz");
-            }
-            else
-            {
-                Console.WriteLine(i);
-            }
+            Console.WriteLine(EsMultiploDeTres(i) ? "Fizz" : i.ToString());
         }
     }
     
