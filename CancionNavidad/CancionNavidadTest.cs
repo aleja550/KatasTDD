@@ -4,14 +4,13 @@ namespace CancionNavidad;
 
 public class CancionNavidadTest
 {
+    private readonly Cancion _cancion = new();
+
     [Fact]
     public void Cancion_Debe_Tener_12_Estrofas()
     {
-        //Arrange
-        var cancion = new Cancion();
-        
         //Act
-        var cantidadEstrofas = cancion.Estrofas.Count;
+        var cantidadEstrofas = _cancion.Estrofas.Count;
         
         //Assert
         cantidadEstrofas.Should().Be(12);
@@ -20,11 +19,8 @@ public class CancionNavidadTest
     [Fact]
     public void PrimeraEstrofa_Debe_Tener_3_Lineas()
     {
-        //Arrange
-        var cancion = new Cancion();
-    
         //Act
-        var cantidadLineas = cancion.Estrofas[0].Lineas.Count;
+        var cantidadLineas = _cancion.Estrofas[0].Lineas.Count;
     
         //Assert
         cantidadLineas.Should().Be(3);
@@ -34,11 +30,10 @@ public class CancionNavidadTest
     public void PrimeraLinea_DeEstrofa1_Debe_Ser_OnTheFirstDayOfChristmas()
     {
         //Arrange
-        var cancion = new Cancion();
         const string textoEsperado = "On the first day of Christmas";
     
         //Act
-        var primeraLinea = cancion.Estrofas[0].Lineas[0];
+        var primeraLinea = _cancion.Estrofas[0].Lineas[0];
     
         //Assert
         primeraLinea.Should().Be(textoEsperado);
@@ -48,11 +43,10 @@ public class CancionNavidadTest
     public void SegundaLinea_DeEstrofa1_Debe_Ser_MyTrueLoveSentToMe()
     {
         //Arrange
-        var cancion = new Cancion();
         const string textoEsperado = "My true love sent to me:";
     
         //Act
-        var segundaLinea = cancion.Estrofas[0].Lineas[1];
+        var segundaLinea = _cancion.Estrofas[0].Lineas[1];
     
         //Assert
         segundaLinea.Should().Be(textoEsperado);
@@ -62,11 +56,10 @@ public class CancionNavidadTest
     public void TerceraLinea_DeEstrofa1_Debe_Ser_APartridgeInAPearTree()
     {
         //Arrange
-        var cancion = new Cancion();
         const string textoEsperado = "A partridge in a pear tree.";
     
         //Act
-        var terceraLinea = cancion.Estrofas[0].Lineas[2];
+        var terceraLinea = _cancion.Estrofas[0].Lineas[2];
     
         //Assert
         terceraLinea.Should().Be(textoEsperado);
@@ -76,7 +69,6 @@ public class CancionNavidadTest
     public void PrimeraEstrofa_Debe_Tener_Contenido_Completo()
     {
         //Arrange
-        var cancion = new Cancion();
         var contenidoEsperado = new List<string>
         {
             "On the first day of Christmas",
@@ -85,7 +77,7 @@ public class CancionNavidadTest
         };
     
         //Act
-        var contenidoEstrofa = cancion.Estrofas[0].Lineas;
+        var contenidoEstrofa = _cancion.Estrofas[0].Lineas;
     
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
@@ -94,11 +86,8 @@ public class CancionNavidadTest
     [Fact]
     public void SegundaEstrofa_Debe_Tener_4_Lineas()
     {
-        //Arrange
-        var cancion = new Cancion();
-    
         //Act
-        var cantidadLineas = cancion.Estrofas[2].Lineas.Count;
+        var cantidadLineas = _cancion.Estrofas[1].Lineas.Count;
     
         //Assert
         cantidadLineas.Should().Be(4);
@@ -108,7 +97,6 @@ public class CancionNavidadTest
     public void SegundaEstrofa_Debe_Tener_Contenido_Completo()
     {
         //Arrange
-        var cancion = new Cancion();
         var contenidoEsperado = new List<string>
         {
             "On the second day of Christmas",
@@ -118,7 +106,7 @@ public class CancionNavidadTest
         };
     
         //Act
-        var contenidoEstrofa = cancion.Estrofas[1].Lineas;
+        var contenidoEstrofa = _cancion.Estrofas[1].Lineas;
     
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
@@ -133,15 +121,15 @@ public class CancionNavidadTest
     public void TodasLasEstrofas_Deben_Empezar_Con_OnTheDayOfChristmas(int indiceEstrofa, string valor)
     {
         //Arrange
-        var cancion = new Cancion();
         var primeraLineaEsperada = $"On the {valor} day of Christmas";
     
         //Act
-        var primeraLinea = cancion.Estrofas[indiceEstrofa].Lineas[0];
+        var primeraLinea = _cancion.Estrofas[indiceEstrofa].Lineas[0];
     
         //Assert
         primeraLinea.Should().Be(primeraLineaEsperada);
     }
+    
     [Theory]
     [InlineData(0)]
     [InlineData(1)]
@@ -150,11 +138,10 @@ public class CancionNavidadTest
     public void TodasLasEstrofas_Deben_Tener_MyTrueLoveSentToMe_ComoSegundaLinea(int indiceEstrofa)
     {
         //Arrange
-        var cancion = new Cancion();
-        var segundaLineaEsperada = "My true love sent to me:";
+        const string segundaLineaEsperada = "My true love sent to me:";
     
         //Act
-        var segundaLinea = cancion.Estrofas[indiceEstrofa].Lineas[1];
+        var segundaLinea = _cancion.Estrofas[indiceEstrofa].Lineas[1];
     
         //Assert
         segundaLinea.Should().Be(segundaLineaEsperada);
@@ -168,11 +155,10 @@ public class CancionNavidadTest
     public void TodasLasEstrofas_Deben_Terminar_Con_APartridgeInAPearTree(int indiceEstrofa)
     {
         //Arrange
-        var cancion = new Cancion();
-        var ultimaLineaEsperada = "A partridge in a pear tree.";
+        const string ultimaLineaEsperada = "A partridge in a pear tree.";
     
         //Act
-        var estrofa = cancion.Estrofas[indiceEstrofa];
+        var estrofa = _cancion.Estrofas[indiceEstrofa];
         var ultimaLinea = estrofa.Lineas[^1];
     
         //Assert
@@ -183,7 +169,6 @@ public class CancionNavidadTest
     public void TerceraEstrofa_Debe_Tener_Regalos_En_Orden_Inverso()
     {
         //Arrange
-        var cancion = new Cancion();
         var contenidoEsperado = new List<string>
         {
             "On the third day of Christmas",
@@ -194,7 +179,7 @@ public class CancionNavidadTest
         };
     
         //Act
-        var contenidoEstrofa = cancion.Estrofas[2].Lineas;
+        var contenidoEstrofa = _cancion.Estrofas[2].Lineas;
     
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
@@ -204,7 +189,6 @@ public class CancionNavidadTest
     public void Estrofa12_Debe_Tener_Contenido_Completo()
     {
         //Arrange
-        var cancion = new Cancion();
         var contenidoEsperado = new List<string>
         {
             "On the twelfth day of Christmas",
@@ -224,7 +208,7 @@ public class CancionNavidadTest
         };
     
         //Act
-        var contenidoEstrofa = cancion.Estrofas[11].Lineas;
+        var contenidoEstrofa = _cancion.Estrofas[11].Lineas;
     
         //Assert
         contenidoEstrofa.Should().BeEquivalentTo(contenidoEsperado);
@@ -234,11 +218,10 @@ public class CancionNavidadTest
     public void Estrofa_Debe_Poder_Imprimirse_Con_Saltos_De_Linea()
     {
         //Arrange
-        var cancion = new Cancion();
-        var estrofaEsperada = "On the first day of Christmas\nMy true love sent to me:\nA partridge in a pear tree.";
+        const string estrofaEsperada = "On the first day of Christmas\nMy true love sent to me:\nA partridge in a pear tree.";
     
         //Act
-        var estrofaImpresa = cancion.Estrofas[0].ObtenerTextoCompleto();
+        var estrofaImpresa = _cancion.Estrofas[0].ObtenerTextoCompleto();
     
         //Assert
         estrofaImpresa.Should().Be(estrofaEsperada);
@@ -248,7 +231,6 @@ public class CancionNavidadTest
     public void Cancion_Debe_Poder_Imprimirse_Completa_Con_Separacion_Entre_Estrofas()
     {
         //Arrange
-        var cancion = new Cancion();
         var cancionEsperada = "On the first day of Christmas\n" +
                       "My true love sent to me:\n" +
                       "A partridge in a pear tree.\n\n" +
@@ -353,7 +335,7 @@ public class CancionNavidadTest
                       "A partridge in a pear tree.";
     
         //Act
-        var cancionCompleta = cancion.ObtenerCancionCompleta();
+        var cancionCompleta = _cancion.ObtenerCancionCompleta();
     
         //Assert
         cancionCompleta.Should().Be(cancionEsperada);
