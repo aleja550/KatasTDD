@@ -4,4 +4,6 @@
 - [x] Validar números multiplos de 5
 - [x] Imprimir Buzz cuando sea multiplo de 5 en lugar del numero
 - [x] Validar números multiplos de 5 y 3
-- [ ] Imprimir FizzBuzz cuando sea multiplo de 3 y 5
+- [x] Imprimir FizzBuzz cuando sea multiplo de 3 y 5
+- [x] Imprimir numeros normales sin reemplazar si no son multiplos de 3 o 5
+- [x] Obtener valor debe retornar el valor correcto de acuerdo al numero

@@ -9,19 +9,10 @@ public class FizzBuzzTest(ITestOutputHelper output)
     
     public void Debe_Imprimir_CienNumeros()
     {
-        //Arrange
-        var captura = new StringWriter();
-        Console.SetOut(captura);
- 
         //Act
-        ImprimirNumeros();
+        var lineas = ObtenerLineasDeImpresion();
         
-        //Assert 
-        var salida = captura.ToString();
-        var lineas = salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
-        
-        output.WriteLine(salida);
-        
+        //Assert
         lineas.Length.Should().Be(100);
     }
 
@@ -33,7 +24,7 @@ public class FizzBuzzTest(ITestOutputHelper output)
     public void Validar_Numero_Multiplo_De_Tres(int numero)
     {
         //Act
-        var resultado = EsMultiploDeTres(numero);
+        var resultado = FizzBuzz.EsMultiploDeTres(numero);
     
         //Assert
         resultado.Should().BeTrue();
@@ -42,18 +33,8 @@ public class FizzBuzzTest(ITestOutputHelper output)
     [Fact]
     public void Debe_Imprimir_Fizz_CuandoSea_MultiploDeTres()
     {
-        //Arrange
-        var captura = new StringWriter();
-        Console.SetOut(captura);
- 
         //Act
-        ImprimirNumeros();
-        
-        //Assert 
-        var salida = captura.ToString();
-        var lineas = salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
-        
-        output.WriteLine(salida);
+        var lineas = ObtenerLineasDeImpresion();
         
         lineas[2].Should().Be("Fizz");
         lineas[5].Should().Be("Fizz");
@@ -69,7 +50,7 @@ public class FizzBuzzTest(ITestOutputHelper output)
     public void Validar_Numero_Multiplo_De_Cinco(int numero)
     {
         //Act
-        var resultado = EsMultiploDeCinco(numero);
+        var resultado = FizzBuzz.EsMultiploDeCinco(numero);
     
         //Assert
         resultado.Should().BeTrue();
@@ -78,18 +59,8 @@ public class FizzBuzzTest(ITestOutputHelper output)
     [Fact]
     public void Debe_Imprimir_Buzz_CuandoSea_MultiploDeCinco()
     {
-        //Arrange
-        var captura = new StringWriter();
-        Console.SetOut(captura);
- 
         //Act
-        ImprimirNumeros();
-        
-        //Assert 
-        var salida = captura.ToString();
-        var lineas = salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
-        
-        output.WriteLine(salida);
+        var lineas = ObtenerLineasDeImpresion();
         
         lineas[4].Should().Be("Buzz");
         lineas[9].Should().Be("Buzz");
@@ -105,7 +76,7 @@ public class FizzBuzzTest(ITestOutputHelper output)
     public void Validar_Numero_Multiplo_De_Tres_Y_Cinco(int numero)
     {
         //Act
-        var resultado = EsMultiploDeAmbos(numero);
+        var resultado = FizzBuzz.EsMultiploDeAmbos(numero);
     
         //Assert
         resultado.Should().BeTrue();
@@ -114,18 +85,8 @@ public class FizzBuzzTest(ITestOutputHelper output)
     [Fact]
     public void Debe_Imprimir_FizzBuzz_CuandoSea_MultiploDeTres_Y_Cinco()
     {
-        //Arrange
-        var captura = new StringWriter();
-        Console.SetOut(captura);
- 
         //Act
-        ImprimirNumeros();
-    
-        //Assert 
-        var salida = captura.ToString();
-        var lineas = salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
-    
-        output.WriteLine(salida);
+        var lineas = ObtenerLineasDeImpresion();
     
         lineas[14].Should().Be("FizzBuzz");  
         lineas[29].Should().Be("FizzBuzz"); 
@@ -133,26 +94,45 @@ public class FizzBuzzTest(ITestOutputHelper output)
         lineas[59].Should().Be("FizzBuzz");
     }
     
-    private static bool EsMultiploDeAmbos(int numero) =>EsMultiploDeTres(numero) && EsMultiploDeCinco(numero);
-    
-    private static void ImprimirNumeros()
+    [Theory]
+    [InlineData(1, "1")]
+    [InlineData(2, "2")]
+    [InlineData(4, "4")]
+    [InlineData(7, "7")]
+    public void Debe_Imprimir_Numeros_Normales_SinReemplazar(int numero, string esperado)
     {
-        for (var i = 1; i <= 100; i++)
-        {
-            Console.WriteLine(ObtenerValor(i));
-        }
+        //Act
+        var resultado = FizzBuzz.ObtenerValor(numero);
+    
+        //Assert
+        resultado.Should().Be(esperado);
     }
     
-    private static string ObtenerValor(int numero)
+    [Theory]
+    [InlineData(3, "Fizz")]
+    [InlineData(5, "Buzz")]
+    [InlineData(15, "FizzBuzz")]
+    [InlineData(7, "7")]
+    public void ObtenerValor_Debe_Retornar_Valor_Correcto(int numero, string esperado)
     {
-        if (EsMultiploDeAmbos(numero)) return "FizzBuzz";
-    
-        if (EsMultiploDeTres(numero)) return "Fizz";
-    
-        return EsMultiploDeCinco(numero) ? "Buzz" : numero.ToString();
+        //Act
+        var resultado = FizzBuzz.ObtenerValor(numero);
+        
+        //Assert
+        resultado.Should().Be(esperado);
     }
     
-    private static bool EsMultiploDeTres(int numero) => numero % 3 == 0;
-
-    private static bool EsMultiploDeCinco(int numero) => numero % 5 == 0;
+    
+    private string[] ObtenerLineasDeImpresion()
+    {
+        var captura = new StringWriter();
+        Console.SetOut(captura);
+        
+        FizzBuzz.Imprimir();
+        
+        var salida = captura.ToString();
+        output.WriteLine(salida);
+        
+        return salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
+    }
 }
