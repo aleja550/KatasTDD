@@ -243,4 +243,119 @@ public class CancionNavidadTest
         //Assert
         estrofaImpresa.Should().Be(estrofaEsperada);
     }
+    
+    [Fact]
+    public void Cancion_Debe_Poder_Imprimirse_Completa_Con_Separacion_Entre_Estrofas()
+    {
+        //Arrange
+        var cancion = new Cancion();
+        var cancionEsperada = "On the first day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the second day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the third day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the fourth day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the fifth day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Five golden rings\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the sixth day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Six geese a-laying\n" +
+                      "Five golden rings\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the seventh day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Seven swans a-swimming\n" +
+                      "Six geese a-laying\n" +
+                      "Five golden rings\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the eighth day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Eight maids a-milking\n" +
+                      "Seven swans a-swimming\n" +
+                      "Six geese a-laying\n" +
+                      "Five golden rings\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the ninth day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Nine ladies dancing\n" +
+                      "Eight maids a-milking\n" +
+                      "Seven swans a-swimming\n" +
+                      "Six geese a-laying\n" +
+                      "Five golden rings\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the tenth day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Ten lords a-leaping\n" +
+                      "Nine ladies dancing\n" +
+                      "Eight maids a-milking\n" +
+                      "Seven swans a-swimming\n" +
+                      "Six geese a-laying\n" +
+                      "Five golden rings\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the eleventh day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Eleven pipers piping\n" +
+                      "Ten lords a-leaping\n" +
+                      "Nine ladies dancing\n" +
+                      "Eight maids a-milking\n" +
+                      "Seven swans a-swimming\n" +
+                      "Six geese a-laying\n" +
+                      "Five golden rings\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.\n\n" +
+                      "On the twelfth day of Christmas\n" +
+                      "My true love sent to me:\n" +
+                      "Twelve drummers drumming\n" +
+                      "Eleven pipers piping\n" +
+                      "Ten lords a-leaping\n" +
+                      "Nine ladies dancing\n" +
+                      "Eight maids a-milking\n" +
+                      "Seven swans a-swimming\n" +
+                      "Six geese a-laying\n" +
+                      "Five golden rings\n" +
+                      "Four calling birds\n" +
+                      "Three french hens\n" +
+                      "Two turtle doves and\n" +
+                      "A partridge in a pear tree.";
+    
+        //Act
+        var cancionCompleta = cancion.ObtenerCancionCompleta();
+    
+        //Assert
+        cancionCompleta.Should().Be(cancionEsperada);
+    }
 }

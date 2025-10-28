@@ -12,4 +12,9 @@ public class Cancion
             Estrofas.Add(new Estrofa(i));
         }
     }
+
+    public string ObtenerCancionCompleta()
+    {
+        throw new NotImplementedException();
+    }
 }
