@@ -35,7 +35,7 @@ public class CancionNavidadTest
     {
         //Arrange
         var cancion = new Cancion();
-        var textoEsperado = "On the first day of Christmas";
+        const string textoEsperado = "On the first day of Christmas";
     
         //Act
         var primeraLinea = cancion.Estrofas[0].Lineas[0];
