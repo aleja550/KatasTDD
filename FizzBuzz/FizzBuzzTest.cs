@@ -101,11 +101,15 @@ public class FizzBuzzTest(ITestOutputHelper output)
     {
         for (var i = 1; i <= 100; i++)
         {
-            Console.WriteLine(EsMultiploDeTres(i) 
-                ? "Fizz" 
-                : EsMultiploDeCinco(i)
-                ? "Buzz" : i.ToString());
+            Console.WriteLine(ObtenerValor(i));
         }
+    }
+    
+    private static string ObtenerValor(int numero)
+    {
+        if (EsMultiploDeTres(numero)) return "Fizz";
+    
+        return EsMultiploDeCinco(numero) ? "Buzz" : numero.ToString();
     }
     
     private static bool EsMultiploDeTres(int numero) => numero % 3 == 0;
