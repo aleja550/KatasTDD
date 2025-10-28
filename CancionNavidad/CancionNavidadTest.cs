@@ -63,7 +63,7 @@ public class CancionNavidadTest
     {
         //Arrange
         var cancion = new Cancion();
-        var textoEsperado = "A partridge in a pear tree.";
+        const string textoEsperado = "A partridge in a pear tree.";
     
         //Act
         var terceraLinea = cancion.Estrofas[0].Lineas[2];
