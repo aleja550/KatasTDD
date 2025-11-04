@@ -133,6 +133,6 @@ public class FizzBuzzTest(ITestOutputHelper output)
         var salida = captura.ToString();
         output.WriteLine(salida);
         
-        return salida.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries);
+        return salida.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
     }
 }
