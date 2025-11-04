@@ -108,6 +108,20 @@ public class NumeroRomanoTests
         resultado.Should().Be("II");
     }
     
+    [Fact]
+    public void Convertir3_Debe_RetornarIII()
+    {
+        // Arrange  
+        var numero = 3;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("III");
+    }
+    
+    
     
     
     // 🔴  🟢  🔵 
