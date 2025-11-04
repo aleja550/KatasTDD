@@ -10,6 +10,7 @@ public static class NumeroRomano
             2 => "II",
             3 => "III",
             5 => "V",
+            6 => "VI",
             10 => "X",
             50 => "L",
             100 => "C",
