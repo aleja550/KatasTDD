@@ -55,4 +55,6 @@ public class NumeroRomanoTests
         // Assert
         resultado.Should().Be("L");
     }
+    
+    // 🔴🟢🔵
 }

@@ -8,7 +8,9 @@ public static class NumeroRomano
         {
             1 => "I",
             2 => "V",
-            _ => "X"
+            10 => "X",
+            50 => "L",
+            _ => throw new ArgumentOutOfRangeException(nameof(numero), numero, null)
         };
     }
 }
