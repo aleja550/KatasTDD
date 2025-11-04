@@ -17,8 +17,8 @@
 - [x] Convertir 8 debe retornar "VIII"
 
 ## Casos especiales con uniones
-- [ ] Convertir 4 debe retornar "IV"
-- [ ] Convertir 9 debe retornar "IX"
+- [x] Convertir 4 debe retornar "IV"
+- [x] Convertir 9 debe retornar "IX"
 - [ ] Convertir 40 debe retornar "XL"
 - [ ] Convertir 90 debe retornar "XC"
 - [ ] Convertir 400 debe retornar "CD"

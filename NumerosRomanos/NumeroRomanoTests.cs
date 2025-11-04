@@ -173,7 +173,18 @@ public class NumeroRomanoTests
         resultado.Should().Be("IV");
     }
     
-    
+    [Fact]
+    public void Convertir9_Debe_RetornarIX()
+    {
+        // Arrange  
+        var numero = 9;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("IX");
+    }
     
     
     // 🔴  🟢  🔵 
