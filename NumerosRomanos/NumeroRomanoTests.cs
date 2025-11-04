@@ -186,6 +186,19 @@ public class NumeroRomanoTests
         resultado.Should().Be("IX");
     }
     
+    [Fact]
+    public void Convertir40_Debe_RetornarXL()
+    {
+        // Arrange  
+        var numero = 40;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("XL");
+    }
+    
     
     // 🔴  🟢  🔵 
 }
