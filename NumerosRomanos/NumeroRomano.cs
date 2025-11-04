@@ -10,6 +10,7 @@ public static class NumeroRomano
             2 => "V",
             10 => "X",
             50 => "L",
+            100 => "C",
             _ => throw new ArgumentOutOfRangeException(nameof(numero), numero, null)
         };
     }
