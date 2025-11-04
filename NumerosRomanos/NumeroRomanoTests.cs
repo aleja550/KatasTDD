@@ -199,6 +199,44 @@ public class NumeroRomanoTests
         resultado.Should().Be("XL");
     }
     
+    [Fact]
+    public void Convertir90_Debe_RetornarXC()
+    {
+        // Arrange  
+        var numero = 90;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("XC");
+    }
+    
+    [Fact]
+    public void Convertir400_Debe_RetornarXC()
+    {
+        // Arrange  
+        var numero = 400;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+    
+        // Assert
+        resultado.Should().Be("CD");
+    }
+    
+    [Fact]
+    public void Convertir900_Debe_RetornarCM()
+    {
+        // Arrange  
+        var numero = 900;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+    
+        // Assert
+        resultado.Should().Be("CM");
+    }
     
     // 🔴  🟢  🔵 
 }

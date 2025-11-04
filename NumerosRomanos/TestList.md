@@ -19,10 +19,10 @@
 ## Casos especiales con uniones
 - [x] Convertir 4 debe retornar "IV"
 - [x] Convertir 9 debe retornar "IX"
-- [ ] Convertir 40 debe retornar "XL"
-- [ ] Convertir 90 debe retornar "XC"
-- [ ] Convertir 400 debe retornar "CD"
-- [ ] Convertir 900 debe retornar "CM"
+- [x] Convertir 40 debe retornar "XL"
+- [x] Convertir 90 debe retornar "XC"
+- [x] Convertir 400 debe retornar "CD"
+- [x] Convertir 900 debe retornar "CM"
 
 ## Casos en el que se tienen decenas
 - [ ] Convertir 20 debe retornar "XX"
