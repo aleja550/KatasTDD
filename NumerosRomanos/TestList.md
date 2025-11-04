@@ -13,8 +13,8 @@
 - [x] Convertir 2 debe retornar "II"
 - [x] Convertir 3 debe retornar "III"
 - [x] Convertir 6 debe retornar "VI"
-- [ ] Convertir 7 debe retornar "VII"
-- [ ] Convertir 8 debe retornar "VIII"
+- [x] Convertir 7 debe retornar "VII"
+- [x] Convertir 8 debe retornar "VIII"
 
 ## Casos especiales con uniones
 - [ ] Convertir 4 debe retornar "IV"

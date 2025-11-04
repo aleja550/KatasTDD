@@ -160,6 +160,19 @@ public class NumeroRomanoTests
         resultado.Should().Be("VIII");
     }
     
+    [Fact]
+    public void Convertir4_Debe_RetornarIV()
+    {
+        // Arrange  
+        var numero = 4;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("IV");
+    }
+    
     
     
     
