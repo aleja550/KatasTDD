@@ -4,7 +4,7 @@
 - [x] Convertir 1 debe retornar "I"
 - [x] Convertir 5 debe retornar "V"
 - [x] Convertir 10 debe retornar "X"
-- [ ] Convertir 50 debe retornar "L"
+- [x] Convertir 50 debe retornar "L"
 - [ ] Convertir 100 debe retornar "C"
 - [ ] Convertir 500 debe retornar "D"
 - [ ] Convertir 1000 debe retornar "M"

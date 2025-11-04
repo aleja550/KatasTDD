@@ -56,5 +56,18 @@ public class NumeroRomanoTests
         resultado.Should().Be("L");
     }
     
+    [Fact]
+    public void Convertir100_Debe_RetornarC()
+    {
+        // Arrange
+        var numero = 100;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("C");
+    }
+    
     // 🔴🟢🔵
 }
