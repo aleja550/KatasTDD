@@ -1,8 +1,8 @@
 # Test List - Números Romanos
 
 ## Casos sencillos o de base
-- [ ] Convertir 1 debe retornar "I"
-- [ ] Convertir 5 debe retornar "V"
+- [x] Convertir 1 debe retornar "I"
+- [x] Convertir 5 debe retornar "V"
 - [ ] Convertir 10 debe retornar "X"
 - [ ] Convertir 50 debe retornar "L"
 - [ ] Convertir 100 debe retornar "C"
