@@ -6,7 +6,7 @@
 - [x] Convertir 10 debe retornar "X"
 - [x] Convertir 50 debe retornar "L"
 - [x] Convertir 100 debe retornar "C"
-- [ ] Convertir 500 debe retornar "D"
+- [x] Convertir 500 debe retornar "D"
 - [ ] Convertir 1000 debe retornar "M"
 
 ## Casos en el que se repiten los simbolos
