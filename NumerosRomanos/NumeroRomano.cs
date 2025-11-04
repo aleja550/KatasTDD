@@ -10,6 +10,7 @@ public static class NumeroRomano
         (50, "L"),
         (10, "X"),
         (5, "V"),
+        (4, "IV"),
         (1, "I")
     ];
     

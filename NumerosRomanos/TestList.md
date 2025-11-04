@@ -31,10 +31,3 @@
 ## Casos en el que se tienen centenas
 - [ ] Convertir 200 debe retornar "CC"
 - [ ] Convertir 300 debe retornar "CCC"
-
-## Combinaciones de diferentes opciones probadas antes
-- [ ] Convertir 15 debe retornar "XV"
-- [ ] Convertir 27 debe retornar "XXVII"
-- [ ] Convertir 44 debe retornar "XLIV"
-- [ ] Convertir 99 debe retornar "XCIX"
-- [ ] Convertir 294 debe retornar "CCXCIV"
