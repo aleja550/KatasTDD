@@ -29,4 +29,17 @@ public class NumeroRomanoTests
         // Assert
         resultado.Should().Be("V");
     }
+    
+    [Fact]
+    public void Convertir10_Debe_RetornarX()
+    {
+        // Arrange
+        var numero = 10;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("X");
+    }
 }
