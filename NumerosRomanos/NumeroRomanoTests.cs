@@ -82,6 +82,19 @@ public class NumeroRomanoTests
         resultado.Should().Be("D");
     }
     
+    [Fact]
+    public void Convertir1000_Debe_RetornarM()
+    {
+        // Arrange
+        var numero = 1000;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("M");
+    }
+    
     
     // 🔴🟢🔵
 }
