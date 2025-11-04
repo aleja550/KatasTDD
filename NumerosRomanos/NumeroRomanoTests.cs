@@ -95,6 +95,20 @@ public class NumeroRomanoTests
         resultado.Should().Be("M");
     }
     
+    [Fact]
+    public void Convertir2_Debe_RetornarII()
+    {
+        // Arrange  
+        var numero = 2;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("II");
+    }
     
-    // 🔴🟢🔵
+    
+    
+    // 🔴  🟢  🔵 
 }
