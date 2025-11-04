@@ -3,7 +3,7 @@
 ## Casos sencillos o de base
 - [x] Convertir 1 debe retornar "I"
 - [x] Convertir 5 debe retornar "V"
-- [ ] Convertir 10 debe retornar "X"
+- [x] Convertir 10 debe retornar "X"
 - [ ] Convertir 50 debe retornar "L"
 - [ ] Convertir 100 debe retornar "C"
 - [ ] Convertir 500 debe retornar "D"

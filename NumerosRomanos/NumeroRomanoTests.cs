@@ -42,4 +42,17 @@ public class NumeroRomanoTests
         // Assert
         resultado.Should().Be("X");
     }
+    
+    [Fact]
+    public void Convertir50_Debe_RetornarL()
+    {
+        // Arrange
+        var numero = 50;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("L");
+    }
 }
