@@ -69,5 +69,19 @@ public class NumeroRomanoTests
         resultado.Should().Be("C");
     }
     
+    [Fact]
+    public void Convertir500_Debe_RetornarD()
+    {
+        // Arrange
+        var numero = 500;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("D");
+    }
+    
+    
     // 🔴🟢🔵
 }
