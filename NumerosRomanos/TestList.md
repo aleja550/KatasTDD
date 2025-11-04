@@ -12,7 +12,7 @@
 ## Casos en el que se repiten los simbolos
 - [x] Convertir 2 debe retornar "II"
 - [x] Convertir 3 debe retornar "III"
-- [ ] Convertir 6 debe retornar "VI"
+- [x] Convertir 6 debe retornar "VI"
 - [ ] Convertir 7 debe retornar "VII"
 - [ ] Convertir 8 debe retornar "VIII"
 

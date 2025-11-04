@@ -134,6 +134,34 @@ public class NumeroRomanoTests
         resultado.Should().Be("VI");
     }
     
+    [Fact]
+    public void Convertir7_Debe_RetornarVII()
+    {
+        // Arrange  
+        var numero = 7;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("VII");
+    }
+    
+    [Fact]
+    public void Convertir8_Debe_RetornarVIII()
+    {
+        // Arrange  
+        var numero = 8;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("VIII");
+    }
+    
+    
+    
     
     // 🔴  🟢  🔵 
 }
