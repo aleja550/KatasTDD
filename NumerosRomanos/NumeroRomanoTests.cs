@@ -121,7 +121,18 @@ public class NumeroRomanoTests
         resultado.Should().Be("III");
     }
     
-    
+    [Fact]
+    public void Convertir6_Debe_RetornarVI()
+    {
+        // Arrange  
+        var numero = 6;
+
+        // Act
+        var resultado = NumeroRomano.Convertir(numero);
+
+        // Assert
+        resultado.Should().Be("VI");
+    }
     
     
     // 🔴  🟢  🔵 

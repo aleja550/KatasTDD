@@ -10,8 +10,8 @@
 - [x] Convertir 1000 debe retornar "M"
 
 ## Casos en el que se repiten los simbolos
-- [ ] Convertir 2 debe retornar "II"
-- [ ] Convertir 3 debe retornar "III"
+- [x] Convertir 2 debe retornar "II"
+- [x] Convertir 3 debe retornar "III"
 - [ ] Convertir 6 debe retornar "VI"
 - [ ] Convertir 7 debe retornar "VII"
 - [ ] Convertir 8 debe retornar "VIII"
