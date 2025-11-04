@@ -4,6 +4,9 @@ public static class NumeroRomano
 {
     public static string Convertir(int numero)
     {
-        return "I";
+        if (numero == 1)
+            return "I";
+
+        return "V";
     }
 }
