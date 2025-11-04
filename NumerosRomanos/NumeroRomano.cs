@@ -2,21 +2,31 @@ namespace NumerosRomanos;
 
 public static class NumeroRomano
 {
+    private static readonly (int numeroDecimal, string numeroRomano)[] MapeoDecimalARomano =
+    [
+        (1000, "M"),
+        (500, "D"),
+        (100, "C"),
+        (50, "L"),
+        (10, "X"),
+        (5, "V"),
+        (1, "I")
+    ];
+    
     public static string Convertir(int numero)
     {
-        return numero switch
+        var resultado = string.Empty;
+        
+        foreach (var (numeroDecimal, numeroRomano) in MapeoDecimalARomano)
         {
-            1 => "I",
-            2 => "II",
-            3 => "III",
-            5 => "V",
-            6 => "VI",
-            10 => "X",
-            50 => "L",
-            100 => "C",
-            500 => "D",
-            1000 => "M",
-            _ => throw new ArgumentOutOfRangeException(nameof(numero), numero, null)
-        };
+            while (numero >= numeroDecimal)
+            {
+                resultado += numeroRomano;
+                numero -= numeroDecimal;
+            }
+        }
+    
+        return resultado;
     }
+    
 }
