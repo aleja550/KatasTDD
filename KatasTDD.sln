@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancionNavidad", "CancionNa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumerosRomanos", "NumerosRomanos\NumerosRomanos.csproj", "{B9B7E5A1-4EF9-4063-98FF-F865C5097CF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordWrap", "WordWrap\WordWrap.csproj", "{795B1D40-B460-4803-81E3-FB929EDA1104}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{B9B7E5A1-4EF9-4063-98FF-F865C5097CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9B7E5A1-4EF9-4063-98FF-F865C5097CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9B7E5A1-4EF9-4063-98FF-F865C5097CF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795B1D40-B460-4803-81E3-FB929EDA1104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795B1D40-B460-4803-81E3-FB929EDA1104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795B1D40-B460-4803-81E3-FB929EDA1104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795B1D40-B460-4803-81E3-FB929EDA1104}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
